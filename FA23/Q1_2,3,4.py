@@ -26,16 +26,16 @@ def get_bmi():
         (40, float("inf")): "obese class III"
     }
     # Ask for input
-    print(f"Do you want to input your weight and height in SI units or imperial units: \n1. SI units (default)\n2. Imperial units\n")
+    print(f"Do you want to input your weight and height in SI units or imperial units: \n0. SI units (default)\n1. Imperial units\n")
     while True:
         try:
             choice = input("Enter your choice: ")
-            if choice == "" or choice == "1":
+            if choice == "" or choice == "0":
                 # Ask for input
                 weight = float(input("Enter your weight in kg: "))
                 height = float(input("Enter your height in m: "))
                 break
-            elif choice == "2":
+            elif choice == "1":
                 # Ask for input
                 weight = float(input("Enter your weight in lb: "))
                 height = float(input("Enter your height in inch: "))

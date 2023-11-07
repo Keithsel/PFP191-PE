@@ -1,4 +1,6 @@
 # Q2.1
+import os
+
 def get_average_score(scores, weights):
     # Check if length of scores and weights are the same
     if len(scores) != len(weights):
@@ -33,6 +35,9 @@ def get_score_report():
                     print("Please input a number!")
         # Calculate average score
         average_score = get_average_score(scores, weights)
+        # If the file exists, delete it
+        if os.path.exists("score_report.txt"):
+            os.remove("score_report.txt")
         # Write to file
         with open("score_report.txt", "a") as file:
             file.write(f"{name},")

@@ -18,16 +18,16 @@ def count_words(filepath):
                 words_dict[word] = 1
         # Sort the dictionary by value in descending order
         sorted_words = sorted(words_dict.items(), key = lambda x: x[1], reverse = True)
-        # Return the dictionary of top 10 most frequent words
-        return dict(sorted_words[:10])
+        # Return the dictionary of the words
+        return dict(sorted_words)
 
 def main():
     # Please replace the filepath with the path to the file on your computer
     filepath = 'EXAM_PFP191_FA23\PFP191\Vietnamese_Declaration_of_Independence.txt'
-    # Count the top 10 most frequent words
+    # Count the top frequent words
     words_dict = count_words(filepath)
-    # Print the result
-    for word, count in words_dict.items():
-        print(f"{word} {count}")
+    # Print the result of the top 10 frequent words
+    for i in range(10):
+        print(f"{list(words_dict.keys())[i]} {list(words_dict.values())[i]}")
 
 main()
